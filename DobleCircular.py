@@ -9,6 +9,10 @@ class ListaDobleCircular:
         nuevo=Nodo(dato)
         if self.inicio is None:
             self.inicio=nuevo
+            nuevo.siguiente=self.inicio
+            nuevo.anterior=self.inicio
+            self.ultimo=nuevo
+
         elif self.inicio.siguiente is None:
             self.inicio.siguiente=nuevo
             nuevo.anterior=self.inicio
